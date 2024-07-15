@@ -14,14 +14,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("记录", systemImage: "list.bullet")
                 }
-                .background(Color.white)
                 .edgesIgnoringSafeArea(.all)
             
             WordsView()
                 .tabItem {
                     Label("单词", systemImage: "book.fill")
                 }
-                .background(Color.white)
                 .edgesIgnoringSafeArea(.all)
         }
     }

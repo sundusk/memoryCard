@@ -13,6 +13,7 @@
 		041187672C44B119000CE4DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041187662C44B119000CE4DA /* Preview Assets.xcassets */; };
 		0411876E2C44B414000CE4DA /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411876D2C44B414000CE4DA /* WordsView.swift */; };
 		041187722C44B826000CE4DA /* CustomRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041187712C44B825000CE4DA /* CustomRecordsView.swift */; };
+		041187762C44C205000CE4DA /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041187752C44C205000CE4DA /* GlobalConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		041187662C44B119000CE4DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0411876D2C44B414000CE4DA /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
 		041187712C44B825000CE4DA /* CustomRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecordsView.swift; sourceTree = "<group>"; };
+		041187752C44C205000CE4DA /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				041187612C44B117000CE4DA /* ContentView.swift */,
 				0411876D2C44B414000CE4DA /* WordsView.swift */,
 				041187712C44B825000CE4DA /* CustomRecordsView.swift */,
+				041187752C44C205000CE4DA /* GlobalConstant.swift */,
 				041187632C44B119000CE4DA /* Assets.xcassets */,
 				041187652C44B119000CE4DA /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041187622C44B117000CE4DA /* ContentView.swift in Sources */,
+				041187762C44C205000CE4DA /* GlobalConstant.swift in Sources */,
 				041187602C44B117000CE4DA /* sunduskBookApp.swift in Sources */,
 				041187722C44B826000CE4DA /* CustomRecordsView.swift in Sources */,
 				0411876E2C44B414000CE4DA /* WordsView.swift in Sources */,
