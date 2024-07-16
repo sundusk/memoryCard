@@ -14,14 +14,15 @@ struct ContentView: View {
                 .tabItem {
                     Label("记录", systemImage: "list.bullet")
                 }
-                .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.bottom)
             
             WordsView()
                 .tabItem {
                     Label("单词", systemImage: "book.fill")
                 }
-                .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.bottom)
         }
+        .environmentObject(CardsViewModel())
     }
 }
 

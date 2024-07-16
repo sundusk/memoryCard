@@ -14,6 +14,8 @@
 		0411876E2C44B414000CE4DA /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411876D2C44B414000CE4DA /* WordsView.swift */; };
 		041187722C44B826000CE4DA /* CustomRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041187712C44B825000CE4DA /* CustomRecordsView.swift */; };
 		041187762C44C205000CE4DA /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041187752C44C205000CE4DA /* GlobalConstant.swift */; };
+		0472D4172C4647B5009B6731 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472D4162C4647B5009B6731 /* Combine.swift */; };
+		0472D4192C464BDC009B6731 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472D4182C464BDC009B6731 /* CardsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		0411876D2C44B414000CE4DA /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
 		041187712C44B825000CE4DA /* CustomRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecordsView.swift; sourceTree = "<group>"; };
 		041187752C44C205000CE4DA /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
+		0472D4162C4647B5009B6731 /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
+		0472D4182C464BDC009B6731 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				0411876D2C44B414000CE4DA /* WordsView.swift */,
 				041187712C44B825000CE4DA /* CustomRecordsView.swift */,
 				041187752C44C205000CE4DA /* GlobalConstant.swift */,
+				0472D4162C4647B5009B6731 /* Combine.swift */,
+				0472D4182C464BDC009B6731 /* CardsViewModel.swift */,
 				041187632C44B119000CE4DA /* Assets.xcassets */,
 				041187652C44B119000CE4DA /* Preview Content */,
 			);
@@ -147,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				041187622C44B117000CE4DA /* ContentView.swift in Sources */,
+				0472D4192C464BDC009B6731 /* CardsViewModel.swift in Sources */,
 				041187762C44C205000CE4DA /* GlobalConstant.swift in Sources */,
 				041187602C44B117000CE4DA /* sunduskBookApp.swift in Sources */,
+				0472D4172C4647B5009B6731 /* Combine.swift in Sources */,
 				041187722C44B826000CE4DA /* CustomRecordsView.swift in Sources */,
 				0411876E2C44B414000CE4DA /* WordsView.swift in Sources */,
 			);
