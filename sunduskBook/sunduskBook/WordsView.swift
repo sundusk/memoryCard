@@ -12,6 +12,7 @@ struct WordsView: View {
     @EnvironmentObject var viewModel: CardsViewModel
     @State private var showAlert = false
     @State private var selectedCardTitle = ""
+    @State private var cardTwoTitle = ""
     @State private var isFlipped = false
 
     var body: some View {
@@ -20,18 +21,22 @@ struct WordsView: View {
                 .font(.title)
                 .padding()
 
-            List(viewModel.cards) { card in
-                VStack(alignment: .leading) {
-                    Button(action: {
-                        selectedCardTitle = card.title
-                        showAlert = true
-                    }) {
-                        Text(card.title)
-                            .font(.subheadline)
-                            .foregroundColor(.black)
+            List {
+                ForEach(viewModel.cards) { card in
+                    VStack(alignment: .leading) {
+                        Button(action: {
+                            selectedCardTitle = card.title
+                            cardTwoTitle = card.content
+                            showAlert = true
+                        }) {
+                            Text(card.title)
+                                .font(.subheadline)
+                                .foregroundColor(.black)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
+                .onDelete(perform: delete)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -55,17 +60,20 @@ struct WordsView: View {
                                         axis: (x: 0, y: 1, z: 0)
                                     )
 
-                                Text("这是反面")
-                                    .font(.title)
-                                    .frame(width: 300, height: 300)
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 10)
-                                    .opacity(isFlipped ? 1 : 0)
-                                    .rotation3DEffect(
-                                        .degrees(isFlipped ? 0 : -180),
-                                        axis: (x: 0, y: 1, z: 0)
-                                    )
+                                ScrollView {
+                                    Text(cardTwoTitle)
+                                        .font(.title)
+                                        .padding()
+                                }
+                                .frame(width: 300, height: 300)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                                .opacity(isFlipped ? 1 : 0)
+                                .rotation3DEffect(
+                                    .degrees(isFlipped ? 0 : -180),
+                                    axis: (x: 0, y: 1, z: 0)
+                                )
                             }
                             .onTapGesture {
                                 withAnimation {
@@ -73,11 +81,26 @@ struct WordsView: View {
                                 }
                             }
                             .frame(width: 300, height: 300)
+                            
+                            Button(action: {
+                                showAlert = false
+                            }) {
+                                Text("关闭")
+                                    .font(.headline)
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
                         }
                     }
                 }
             }
         )
+    }
+    
+    func delete(at offsets: IndexSet) {
+        viewModel.deleteCard(at: offsets)
     }
 }
 

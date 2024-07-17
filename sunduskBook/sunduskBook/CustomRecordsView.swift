@@ -32,6 +32,7 @@ struct CustomRecordsView: View {
                             .background(Color.blue)
                             .cornerRadius(5)
                     }
+                    .disabled(frontText.isEmpty || backText.isEmpty) // 添加按钮启用条件
                     .padding(.trailing, 20) // 按钮距离右边缘20像素
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text("保存成功"), message: Text("您的记录已保存。"), dismissButton: .default(Text("确定")))

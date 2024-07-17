@@ -22,6 +22,11 @@ class CardsViewModel: ObservableObject {
         saveCards()
     }
 
+    func deleteCard(at offsets: IndexSet) {
+        cards.remove(atOffsets: offsets)
+        saveCards()
+    }
+
     private func saveCards() {
         if let encoded = try? JSONEncoder().encode(cards) {
             UserDefaults.standard.set(encoded, forKey: storageKey)
